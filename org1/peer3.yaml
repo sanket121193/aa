@@ -17,7 +17,7 @@ services:
                 max_attempts: 3
             placement:
                 constraints:
-                    - node.hostname == sanket-PC
+                    - node.hostname == ip-172-31-24-0
         image: hyperledger/fabric-peer
         working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
         command: peer node start
