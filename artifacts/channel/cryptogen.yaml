@@ -12,25 +12,16 @@ OrdererOrgs:
   # ---------------------------------------------------------------------------
   - Name: Orderer
     Domain: example.com
+    EnableNodeOUs: true
     # ---------------------------------------------------------------------------
     # "Specs" - See PeerOrgs below for complete description
     # ---------------------------------------------------------------------------
     Specs:
       - Hostname: orderer
-        SANS:
-          - "34.237.209.204"
       - Hostname: orderer2
-        SANS:
-          - "34.237.209.204"
       - Hostname: orderer3
-        SANS:
-          - "34.237.209.204"
       - Hostname: orderer4
-        SANS:
-          - "34.237.209.204"
       - Hostname: orderer5
-        SANS:
-          - "40.122.25.209"
 
 # ---------------------------------------------------------------------------
 # "PeerOrgs" - Definition of organizations managing peer nodes
@@ -76,7 +67,7 @@ PeerOrgs:
     # name collisions
     # ---------------------------------------------------------------------------
     Template:
-      Count: 4
+      Count: 2
       # Start: 5
       # Hostname: {{.Prefix}}{{.Index}} # default
     # ---------------------------------------------------------------------------
@@ -93,7 +84,6 @@ PeerOrgs:
     Domain: org2.example.com
     EnableNodeOUs: true
     Template:
-      Count: 1
+      Count: 2
     Users:
-
       Count: 1

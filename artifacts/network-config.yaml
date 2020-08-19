@@ -134,7 +134,7 @@ organizations:
     # this way. The SDK should allow applications to set the org admin identity via APIs, and only use
     # this route as an alternative when it exists.
     adminPrivateKey:
-      path: artifacts/channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/1a88ff0ee1a5124900c5c777cf715678981aa5eadd5d9614c857e49e6c477295_sk
+      path: artifacts/channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/2a95e5ab27ec839bed20b72d9bf472aef3a38adfc29983e42024b4fb350836e8_sk
     signedCert:
       path: artifacts/channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
 
@@ -151,7 +151,7 @@ organizations:
     certificateAuthorities:
       - ca_org2
     adminPrivateKey:
-      path: artifacts/channel/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/5d3562acecb0546274e7537b3c8e5fbda10f5ded169c6c29a4b9f436f53dad6e_sk
+      path: artifacts/channel/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/2080810cd936b147a803181acd6a0a63b9e39a56cfad140aa108f68d88581a37_sk
     signedCert:
       path: artifacts/channel/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org2.example.com-cert.pem
 
@@ -162,7 +162,7 @@ organizations:
 #
 orderers:
   orderer.example.com:
-    url: grpcs://34.237.209.204:7050
+    url: grpcs://3.6.201.140:7050
 
     # these are standard properties defined by the gRPC library
     # they will be passed in as-is to gRPC client constructor
@@ -179,7 +179,7 @@ orderers:
 peers:
   peer0.org1.example.com:
     # this URL is used to send endorsement and query requests
-    url: grpcs://34.237.209.204:7051
+    url: grpcs://3.6.201.140:7051
 
     grpcOptions:
       ssl-target-name-override: peer0.org1.example.com
@@ -187,28 +187,28 @@ peers:
       path: artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
 
   peer1.org1.example.com:
-    url: grpcs://34.237.209.204:7056
+    url: grpcs://3.6.201.140:7056
     grpcOptions:
       ssl-target-name-override: peer1.org1.example.com
     tlsCACerts:
       path: artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/ca.crt
 
   peer2.org1.example.com:
-    url: grpcs://34.237.209.204:9051
+    url: grpcs://3.6.201.140:9051
     grpcOptions:
       ssl-target-name-override: peer2.org1.example.com
     tlsCACerts:
       path: artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer2.org1.example.com/tls/ca.crt
 
   peer3.org1.example.com:
-    url: grpcs://34.237.209.204:10051
+    url: grpcs://3.6.201.140:10051
     grpcOptions:
       ssl-target-name-override: peer3.org1.example.com
     tlsCACerts:
       path: artifacts/channel/crypto-config/peerOrganizations/org1.example.com/peers/peer3.org1.example.com/tls/ca.crt
 
   peer0.org2.example.com:
-    url: grpcs://40.122.25.209:8051
+    url: grpcs://3.6.201.140:8051
     grpcOptions:
       ssl-target-name-override: peer0.org2.example.com
     tlsCACerts:
@@ -223,7 +223,7 @@ peers:
 #
 certificateAuthorities:
   ca_org1:
-    url: https://34.237.209.204:7054
+    url: https://3.6.201.140:7054
     # the properties specified under this object are passed to the 'http' client verbatim when
     # making the request to the Fabric-CA server
     httpOptions:
@@ -240,7 +240,7 @@ certificateAuthorities:
     caName: ca_org1
 
   ca_org2:
-    url: https://40.122.25.209:8054
+    url: https://3.6.201.140:8054
     httpOptions:
       verify: false
     tlsCACerts:

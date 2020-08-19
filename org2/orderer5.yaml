@@ -17,7 +17,7 @@ services:
                 max_attempts: 3
             placement:
                 constraints:
-                    - node.hostname == Snapcert
+                    - node.hostname == ip-172-31-32-210
         image: hyperledger/fabric-orderer
         working_dir: /opt/gopath/src/github.com/hyperledger/fabric/orderer
         command: orderer
